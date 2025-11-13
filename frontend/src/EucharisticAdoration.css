@@ -1,0 +1,70 @@
+/* Page background and font */
+.adoration-page {
+  background-color: #fffaf5;
+  color: #3b2a1a;
+  font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header section */
+.adoration-header {
+  background-color: #fff3e2;
+  text-align: center;
+  padding: 2.5rem 1rem;
+  border-bottom: 1px solid #e8d4b8;
+}
+
+.adoration-header h1 {
+  font-size: 2.25rem;
+  color: #4a2c0a;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.adoration-header p {
+  font-style: italic;
+  color: #6b4c2b;
+  font-size: 1.1rem;
+}
+
+/* Main section styling */
+.adoration-content {
+  background-color: #fffaf7;
+  border-top: 1px solid #e6d5be;
+  border-bottom: 1px solid #e6d5be;
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #38220f;
+}
+
+.adoration-content strong {
+  color: #241103;
+}
+
+/* Quotation section */
+.adoration-quote {
+  background-color: #fff5ec;
+  padding: 1.5rem;
+  text-align: center;
+  font-style: italic;
+  font-size: 1rem;
+  color: #6e4d2e;
+  border-top: 1px solid #e6d5be;
+  border-bottom: 5px solid #7b5220;
+  letter-spacing: 0.3px;
+}
+
+/* Footer */
+.adoration-footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #6a4b2b;
+  background-color: #fff3e0;
+  border-top: 1px solid #e0c9a6;
+  padding: 1rem;
+  margin-top: auto;
+}

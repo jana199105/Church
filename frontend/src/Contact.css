@@ -1,0 +1,152 @@
+/* =============================
+   CONTACT PAGE STYLING
+   ============================= */
+
+.page-container {
+  background-color: #fffaf5;
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  max-width: 950px;
+  margin: 3rem auto;
+  font-family: "Poppins", sans-serif;
+  color: #3b2612;
+  line-height: 1.6;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #5a2b0f;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.5px;
+}
+
+.contact-section p {
+  font-size: 1rem;
+  text-align: justify;
+  margin: 0.8rem 0;
+}
+
+/* Fix list alignment and spacing */
+.contact-section ul {
+  list-style-type: disc;
+  margin: 1rem 0 1.5rem 2rem;
+  padding: 0;
+  font-size: 1rem;
+}
+
+.contact-section li {
+  margin-bottom: 0.4rem;
+  color: #3a2610;
+}
+
+h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #5a2b0f;
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+/* Table styling */
+.timing-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0 2rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.timing-table td {
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid #f0e4d0;
+  font-size: 0.95rem;
+}
+
+.label-cell {
+  background-color: #f7ead3;
+  font-weight: 600;
+  width: 160px;
+}
+
+/* Map container styling */
+.map-container {
+  margin-top: 2rem;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 320px;
+  border: none;
+  display: block;
+}
+
+
+/* Scroll-to-top button */
+.scrollTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #8b4513;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.scrollTop:hover {
+  background-color: #a15627;
+}
+
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .page-container {
+    padding: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .timing-table td {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+}
+.contact-section ul {
+  list-style-position: inside; /* Moves bullet inside text block */
+  text-align: left;            /* Align text with bullet */
+  margin: 1rem auto;
+  padding-left: 0;             /* Remove extra indent */
+  display: inline-block;       /* Keeps list compact and centered if parent is centered */
+}
+
+.contact-section li {
+  margin-bottom: 0.4rem;
+  font-size: 1rem;
+  color: #3a2610;
+  line-height: 1.5;
+}

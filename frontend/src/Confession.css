@@ -1,0 +1,92 @@
+.confession-page {
+  background-color: #fffaf5;
+  color: #3b2a1a;
+  font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Section */
+.confession-header {
+  background-color: #fff3e2;
+  text-align: center;
+  padding: 2.5rem 1rem;
+  border-bottom: 1px solid #e8d4b8;
+}
+
+.confession-header h1 {
+  font-size: 2.25rem;
+  color: #4a2c0a;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.confession-header p {
+  font-style: italic;
+  color: #6b4c2b;
+  font-size: 1.1rem;
+}
+
+/* Content Section */
+.confession-content {
+  max-width: 800px;
+  margin: 2rem auto;
+  background-color: #fffdfb;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.confession-content h2 {
+  font-size: 1.5rem;
+  color: #5a3c1a;
+  border-bottom: 2px solid #e5c7a3;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.confession-content ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.confession-content li {
+  margin: 0.5rem 0;
+  font-size: 1.05rem;
+}
+
+.confession-content strong {
+  color: #7b5220;
+}
+
+.confession-content .note {
+  margin-top: 1.5rem;
+  font-style: italic;
+  color: #6a4b2b;
+}
+
+/* Quote Section */
+.confession-quote {
+  background-color: #fff5ec;
+  padding: 1.5rem;
+  text-align: center;
+  font-style: italic;
+  font-size: 1rem;
+  color: #6e4d2e;
+  border-top: 1px solid #e6d5be;
+  border-bottom: 5px solid #7b5220;
+  letter-spacing: 0.3px;
+}
+
+/* Footer */
+.confession-footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #6a4b2b;
+  background-color: #fff3e0;
+  border-top: 1px solid #e0c9a6;
+  padding: 1rem;
+  margin-top: auto;
+}
