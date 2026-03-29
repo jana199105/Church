@@ -229,7 +229,7 @@ const toggleMass = () => {
             <h3>Rev. Fr.</h3>
             <p>Parish Priest</p>
           </div>
-          <div className="clergy-card">
+          {/*<div className="clergy-card">
             <img src="/bishop.jpg" alt="Archbishop" />
             <h3>Most Rev. Dr. Peter Machado</h3>
             <p>Archbishop of Bangalore</p>
@@ -238,7 +238,7 @@ const toggleMass = () => {
             <img src="/pope.jpg" alt="Pope" />
             <h3>His Holiness Pope Francis</h3>
             <p>Supreme Pontiff</p>
-          </div>
+          </div>*/}
         </div>
       </section>
 

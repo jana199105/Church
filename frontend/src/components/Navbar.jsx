@@ -64,7 +64,9 @@ export default function Navbar() {
                 </button>
                 <ul className="submenu">
                   <li><Link to="/MassTimings" className="submenu-link">Mass Timings</Link></li>
-                  <li><Link to="/adoration" className="submenu-link">Eucharistic Adoration</Link></li>
+                  <li><Link to="/Sacraments" className="submenu-link">Sacraments</Link>
+                  
+                  </li>
                  
                     <li><Link to="/AdorationChapel" className="submenu-link">Adoration Chapel</Link></li>
                      <li><Link to="/confession" className="submenu-link">Confession</Link></li>
@@ -72,12 +74,7 @@ export default function Navbar() {
                 </ul>
               </li>
 
-              <li className={`has-submenu ${openMenu === "services" ? "open" : ""}`}>
-                <button onClick={() => toggleMenu("services")}>
-                  Zones
-                </button>
-               
-              </li>
+              <li><Link to="/Zones" >Zones</Link></li>
    <li><Link to="/NewsEvents">News/Events</Link></li>
               <li><Link to="/Gallery">Gallery</Link></li>
               <li><Link to="/Contact">Contact</Link></li>

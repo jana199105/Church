@@ -1,0 +1,43 @@
+.baptism-page {
+  background-color: #faf9f6;
+  color: #3b2b1a;
+  font-family: "Georgia", serif;
+  padding: 3rem 2rem;
+  line-height: 1.8;
+}
+
+.baptism-hero {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.baptism-hero h1 {
+  font-size: 2.5rem;
+  color: #4a2a00;
+  text-transform: uppercase;
+  border-bottom: 3px solid #d6b79b;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+.baptism-content {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fffdfb;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.baptism-content p {
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.baptism-content em {
+  color: #6b2e06;
+}
+
+.baptism-content strong {
+  color: #7b2f00;
+}

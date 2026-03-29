@@ -52,6 +52,21 @@ body {
   background: var(--brown-700);
   color: #fff;
 }
+/* Prevent nested submenu from becoming floating dropdown */
+.nested-submenu {
+  position: static !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  padding-left: 1.5rem;   /* indent under Sacraments */
+  margin-top: 0.3rem;
+}
+
+.nested-submenu li {
+  padding: 4px 0;
+}
+.has-submenu .submenu .nested-submenu {
+  display: block !important;
+}
 
 /* === HERO + NEWS === */
 .hero-split {

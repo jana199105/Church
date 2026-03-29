@@ -15,6 +15,15 @@ import EucharisticAdoration from "./pages/EucharisticAdoration";
 import AdorationChapel from "./pages/AdorationChapel";
 import Confession from "./pages/Confession";
 import ReligiousActivities from "./pages/ReligiousActivities";
+import Sacraments from "./pages/Sacraments";
+import Baptism from "./pages/Baptism";
+import Reconciliation from "./pages/Reconciliation";
+import HolyCommunion from "./pages/HolyCommunion";
+import Confirmation from "./pages/Confirmation";
+import Marriage from "./pages/Marriage";
+import HolyOrders from "./pages/HolyOrders";
+import AnointingOfTheSick from "./pages/AnointingOfTheSick";
+import Zones from "./pages/Zonal";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -35,6 +44,15 @@ function App() {
        <Route path="/religiousactivities" element={<ReligiousActivities />} />
        
 <Route path="/confession" element={<Confession />} />
+     <Route path="/sacraments" element={<Sacraments />} />
+        <Route path="/baptism" element={<Baptism />} />
+        <Route path="/reconciliation" element={<Reconciliation />} />
+        <Route path="/holy-communion" element={<HolyCommunion />} />
+        <Route path="/confirmation" element={<Confirmation />} />
+        <Route path="/marriage" element={<Marriage />} />
+        <Route path="/holy-orders" element={<HolyOrders />} />
+        <Route path="/anointing" element={<AnointingOfTheSick />} />
+        <Route path="/zones" element={<Zones />} />
     </Routes>
   );
 }
