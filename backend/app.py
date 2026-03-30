@@ -283,7 +283,8 @@ def delete_file(album, filename):
 @app.route("/uploads/<path:filename>")
 def serve_uploaded_file(filename):
     return send_from_directory(app.config["UPLOAD_FOLDER"], filename)
-
+from flask_cors import CORS
+CORS(app)
 
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
