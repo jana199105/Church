@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import "../GalleryMange.css";
 
-const BASE = import.meta.env.VITE_API_URL ?? "http://127.0.0.1:5000";
+const BASE = import.meta.env.VITE_API_URL ?? "https://church-bq2s.onrender.com/";
 
 const Gallery = () => {
   const [albums, setAlbums] = useState([]);

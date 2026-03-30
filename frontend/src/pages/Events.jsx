@@ -10,7 +10,7 @@ export default function Events() {
   const [editingId, setEditingId] = useState(null);
 
   const fetchEvents = async () => {
-    const res = await fetch("http://127.0.0.1:5000/events");
+    const res = await fetch("https://church-bq2s.onrender.com/events");
     const data = await res.json();
     setEvents(data);
   };
@@ -22,14 +22,14 @@ export default function Events() {
   const handleAddOrUpdate = async () => {
     const payload = { header, sub_header: subHeader, date_from: dateFrom, date_to: dateTo };
     if (editingId) {
-      await fetch(`http://127.0.0.1:5000/events/${editingId}`, {
+      await fetch(`https://church-bq2s.onrender.com/events/${editingId}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload)
       });
       setEditingId(null);
     } else {
-      await fetch("http://127.0.0.1:5000/events", {
+      await fetch("https://church-bq2s.onrender.com/events", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload)
@@ -43,7 +43,7 @@ export default function Events() {
   };
 
   const handleDelete = async (id) => {
-    await fetch(`http://127.0.0.1:5000/events/${id}`, { method: "DELETE" });
+    await fetch(`https://church-bq2s.onrender.com/events/${id}`, { method: "DELETE" });
     fetchEvents();
   };
 

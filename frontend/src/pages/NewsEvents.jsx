@@ -8,7 +8,7 @@ export default function NewsEvents() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:5000/events/monthly")
+    fetch("https://church-bq2s.onrender.com/events/monthly")
       .then((res) => res.json())
       .then((data) => {
         setEvents(data);
