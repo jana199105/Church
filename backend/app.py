@@ -38,6 +38,9 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 
 ALLOWED_EXTENSIONS = {"png", "jpg", "jpeg", "gif", "mp4", "mov", "avi"}
+@app.route("/")
+def home():
+    return "Backend is running ✅"
 
 # ---------------------------------------------
 # Helper Functions
