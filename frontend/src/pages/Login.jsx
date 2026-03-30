@@ -1,31 +1,35 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; // ✅ add this
 import "../App.css";
 
 export default function Login() {
+  const navigate = useNavigate(); // ✅ add this
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [message, setMessage] = useState("");
-const handleSubmit = async (e) => {
-  e.preventDefault();
 
-  try {
-    const res = await fetch("https://church-bq2s.onrender.com/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, password }),
-    });
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-    const data = await res.json();
-    if (res.ok) {
-      localStorage.setItem("user", JSON.stringify(data.user)); // ✅ Save login
-      window.location.href = "/events"; // Redirect to events page
-    } else {
-      alert(data.message);
+    try {
+      const res = await fetch("https://church-bq2s.onrender.com/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        localStorage.setItem("user", JSON.stringify(data.user));
+        navigate("/events"); // ✅ FIXED
+      } else {
+        alert(data.message);
+      }
+    } catch (err) {
+      alert("Server not reachable");
     }
-  } catch (err) {
-    alert("Server not reachable");
-  }
-};
+  };
 
   return (
     <div className="login-page fadein">
@@ -35,7 +39,6 @@ const handleSubmit = async (e) => {
           <label>UserName</label>
           <input
             type="text"
-            placeholder="Enter username"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
@@ -44,7 +47,6 @@ const handleSubmit = async (e) => {
           <label>Password</label>
           <input
             type="password"
-            placeholder="Enter password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
@@ -52,7 +54,6 @@ const handleSubmit = async (e) => {
 
           <button type="submit">Login</button>
         </form>
-        {message && <p className="login-message">{message}</p>}
       </div>
     </div>
   );
