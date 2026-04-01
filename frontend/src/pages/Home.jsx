@@ -38,7 +38,7 @@ export default function Home() {
   const [activeEvent, setActiveEvent] = useState(0);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:5000/events/monthly")
+    fetch("https://church-bq2s.onrender.com/events/monthly")
       .then((res) => res.json())
       .then((data) => {
         setNewsItems(data);
