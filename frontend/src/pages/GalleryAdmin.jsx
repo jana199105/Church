@@ -31,6 +31,7 @@ export default function GalleryAdmin() {
   // Create album
   const createAlbum = async () => {
     if (!newAlbum.trim()) return alert("Enter album name");
+
     await fetch(`${BASE}/albums/${newAlbum}`, { method: "POST" });
     setAlbums([...albums, newAlbum]);
     setNewAlbum("");
@@ -38,10 +39,17 @@ export default function GalleryAdmin() {
 
   // Upload files
   const uploadFiles = async () => {
-    if (!selectedAlbum || files.length === 0) return alert("Select album & files");
+    if (!selectedAlbum || files.length === 0)
+      return alert("Select album & files");
+
     const form = new FormData();
     for (let f of files) form.append("files", f);
-    const res = await fetch(`${BASE}/upload/${selectedAlbum}`, { method: "POST", body: form });
+
+    const res = await fetch(`${BASE}/upload/${selectedAlbum}`, {
+      method: "POST",
+      body: form,
+    });
+
     if (res.ok) {
       loadMedia(selectedAlbum);
       alert("Uploaded!");
@@ -52,13 +60,34 @@ export default function GalleryAdmin() {
   // Delete file
   const deleteFile = async (file) => {
     if (!window.confirm("Delete this file?")) return;
-    await fetch(`${BASE}/delete/${selectedAlbum}/${file}`, { method: "DELETE" });
+
+    await fetch(`${BASE}/delete/${selectedAlbum}/${file}`, {
+      method: "DELETE",
+    });
+
     setMedia(media.filter((m) => m.name !== file));
+  };
+
+  // Delete album
+  const deleteAlbum = async (album) => {
+    if (!window.confirm(`Delete album "${album}"?`)) return;
+
+    await fetch(`${BASE}/albums/${album}`, {
+      method: "DELETE",
+    });
+
+    setAlbums(albums.filter((a) => a !== album));
+
+    if (selectedAlbum === album) {
+      setSelectedAlbum("");
+      setMedia([]);
+    }
   };
 
   return (
     <>
       <Navbar />
+
       <section className="gallery-admin">
         <h2 className="gallery-title">🛠 Manage Gallery</h2>
 
@@ -78,10 +107,22 @@ export default function GalleryAdmin() {
           {albums.map((a) => (
             <div
               key={a}
-              onClick={() => loadMedia(a)}
-              className={`album-card ${a === selectedAlbum ? "active" : ""}`}
+              className={`album-card ${
+                a === selectedAlbum ? "active" : ""
+              }`}
             >
-              <p>{a}</p>
+              <p onClick={() => loadMedia(a)}>{a}</p>
+
+              {/* Delete Album */}
+              <button
+                className="delete-album-btn"
+                onClick={(e) => {
+                  e.stopPropagation(); // prevent click conflict
+                  deleteAlbum(a);
+                }}
+              >
+                🗑
+              </button>
             </div>
           ))}
         </div>
@@ -90,7 +131,13 @@ export default function GalleryAdmin() {
         {selectedAlbum && (
           <div className="upload-section">
             <h3>📁 Upload to {selectedAlbum}</h3>
-            <input type="file" multiple onChange={(e) => setFiles(e.target.files)} />
+
+            <input
+              type="file"
+              multiple
+              onChange={(e) => setFiles(e.target.files)}
+            />
+
             <button onClick={uploadFiles}>Upload</button>
           </div>
         )}
@@ -100,11 +147,24 @@ export default function GalleryAdmin() {
           {media.map((item) => (
             <div key={item.name} className="gallery-card">
               {item.type === "photo" ? (
-                <img src={`${BASE}${item.url}`} alt={item.name} className="gallery-img" />
+                <img
+                  src={`${BASE}${item.url}`}
+                  alt={item.name}
+                  className="gallery-img"
+                />
               ) : (
-                <video src={`${BASE}${item.url}`} controls className="gallery-video" />
+                <video
+                  src={`${BASE}${item.url}`}
+                  controls
+                  className="gallery-video"
+                />
               )}
-              <button className="delete-btn" onClick={() => deleteFile(item.name)}>
+
+              {/* Delete File */}
+              <button
+                className="delete-btn"
+                onClick={() => deleteFile(item.name)}
+              >
                 ✖
               </button>
             </div>

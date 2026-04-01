@@ -286,5 +286,27 @@ def serve_uploaded_file(filename):
 from flask_cors import CORS
 CORS(app)
 
+@app.route("/albums/<album>", methods=["DELETE"])
+def delete_album(album):
+    album_path = os.path.join(app.config["UPLOAD_FOLDER"], album)
+
+    if not os.path.exists(album_path):
+        return jsonify({"error": "Album not found"}), 404
+
+    try:
+        # delete all files inside
+        for file in os.listdir(album_path):
+            file_path = os.path.join(album_path, file)
+            if os.path.isfile(file_path):
+                os.remove(file_path)
+
+        # delete folder
+        os.rmdir(album_path)
+
+        return jsonify({"message": f"Album '{album}' deleted"}), 200
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
