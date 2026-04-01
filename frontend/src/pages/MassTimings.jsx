@@ -7,15 +7,17 @@ const MassTimings = () => {
   }, []);
 
   const sundayMass = [
-    { time: "6:30 AM", language: "Kannada", notes: "Mass" },
-    { time: "8:00 AM", language: "English", notes: "Community Mass" },
-    { time: "10:00 AM", language: "Tamil", notes: "Mass" },
-  ];
+  { time: "7:00 AM", language: "Kannada", notes: "Mass" },
+  { time: "8:00 AM", language: "Tamil", notes: "Mass" },
+  { time: "9:15 AM", language: "English", notes: "Mass" },
+  { time: "10:30 AM", language: "Malayalam", notes: "Mass" },
+];
 
-  const weekdayMass = [
-    { time: "6:30 AM", language: "English", notes: "Mass" },
-    { time: "6:00 PM", language: "English", notes: "Rosary & Mass" },
-  ];
+const weekdayMass = [
+  { time: "6:30 AM", language: "English", notes: "Monday to Friday Mass" },
+  { time: "6:00 PM", language: "English", notes: "Saturday Mass" },
+  { time: "6:00 PM", language: "English", notes: "First Friday Mass (Adoration follows)" },
+];
   const [showScrollTop, setShowScrollTop] = useState(false);
   return (
     <div className="site"><Navbar/>

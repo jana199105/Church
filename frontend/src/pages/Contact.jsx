@@ -21,33 +21,17 @@ const Contact = () => {
       <ul>
         <li>Mass Bookings</li>
         <li>Marriage Preparation / Counselling</li>
-        <li>Hall Bookings</li>
         <li>Family Record and Subscription Updates</li>
         <li>Cemetery and burial related enquiries</li>
       </ul>
 
-      <p>
-        The <strong>PARISH OFFICE</strong> can be contacted through the following
-        coordinates:
-      </p>
-      <p>
-        <strong>Email:</strong> sttheresachildjesus.dom@gmail.com<br />
-        <strong>Phone:</strong> +91 94835 76210
-      </p>
-
+    
       <h4>PARISH AND ACCOUNTS OFFICE TIMINGS:</h4>
       <table className="timing-table">
-        <tr>
-          <td className="label-cell">Daily</td>
-          <td>9:00 AM – 5:00 PM (Lunch break: 1:00 PM – 2:00 PM)</td>
-        </tr>
-        <tr>
-          <td className="label-cell">Saturdays</td>
-          <td>9:00 AM – 1:00 PM</td>
-        </tr>
+        
         <tr>
           <td className="label-cell">Sundays</td>
-          <td>Closed (except for scheduled parish meetings)</td>
+          <td>8:00 AM – 1:00 PM</td>
         </tr>
       </table>
 

@@ -88,7 +88,7 @@ const Zones = () => {
           </h1>
 
           <p className="mt-4 max-w-2xl mx-auto text-[#f3e4cf] text-base md:text-lg">
-            Discover the parish zones named in honor of saints and sacred patrons.
+            “Zones represent different areas of our parish, bringing together nearby families as one faith community.”
           </p>
         </div>
       </section>

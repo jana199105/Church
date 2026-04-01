@@ -89,7 +89,7 @@ const openContact = () => {
   navigate("/contact"); // Navigate to Mass Timings page
 };
 const openRA = () => {
-  navigate("/religiousactivities"); // Navigate to Mass Timings page
+  navigate("/NewsEvents"); // Navigate to Mass Timings page
 };
 
 
@@ -225,8 +225,8 @@ const toggleMass = () => {
         <h2>Parish Clergy</h2>
         <div className="clergy-grid">
           <div className="clergy-card">
-            <img src="/images/priest.jpg" alt="Parish Priest" />
-            <h3>Rev. Fr.</h3>
+            <img src="/priest.png" alt="Parish Priest" />
+            <h3>Rev. Fr. Antony Peter J</h3>
             <p>Parish Priest</p>
           </div>
           {/*<div className="clergy-card">

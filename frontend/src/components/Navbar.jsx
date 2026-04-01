@@ -68,8 +68,7 @@ export default function Navbar() {
                   
                   </li>
                  
-                    <li><Link to="/AdorationChapel" className="submenu-link">Adoration Chapel</Link></li>
-                     <li><Link to="/confession" className="submenu-link">Confession</Link></li>
+                  
               
                 </ul>
               </li>
