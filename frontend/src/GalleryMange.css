@@ -190,3 +190,25 @@
 .lightbox-nav.next {
   right: 40px;
 }
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow-y: auto;   /* ✅ ADD THIS */
+  padding: 20px;      /* ✅ ADD THIS */
+  z-index: 9999;
+}
+.lightbox-content img,
+.lightbox-content video {
+  width: 100%;
+  height: auto;
+  max-height: 90vh;   /* ✅ keeps inside screen */
+}
+.lightbox-content {
+  overflow-y: auto;
+}
