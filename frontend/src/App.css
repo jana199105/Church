@@ -1630,4 +1630,8 @@ ul {
 .gallery-card:hover .delete-btn {
   opacity: 1;
 }
-
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}

@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import "../GalleryMange.css";
 
-const BASE = import.meta.env.VITE_API_URL ?? "https://church-bq2s.onrender.com/";
+const BASE =
+  import.meta.env.VITE_API_URL || "https://church-bq2s.onrender.com";
 
 const Gallery = () => {
   const [albums, setAlbums] = useState([]);
@@ -11,11 +12,15 @@ const Gallery = () => {
   const [lightboxIndex, setLightboxIndex] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  // Fetch albums
+  // Fetch albums (remove duplicates)
   useEffect(() => {
     fetch(`${BASE}/gallery`)
       .then((res) => res.json())
-      .then((data) => setAlbums(data))
+      .then((data) => {
+        console.log("Albums:", data); // debug
+        const uniqueAlbums = [...new Set(data)];
+        setAlbums(uniqueAlbums);
+      })
       .catch((err) => console.error("Error loading albums:", err));
   }, []);
 
@@ -42,13 +47,17 @@ const Gallery = () => {
   // Lightbox controls
   const openLightbox = (index) => setLightboxIndex(index);
   const closeLightbox = () => setLightboxIndex(null);
+
   const nextMedia = (e) => {
     e.stopPropagation();
     setLightboxIndex((prev) => (prev + 1) % media.length);
   };
+
   const prevMedia = (e) => {
     e.stopPropagation();
-    setLightboxIndex((prev) => (prev - 1 + media.length) % media.length);
+    setLightboxIndex(
+      (prev) => (prev - 1 + media.length) % media.length
+    );
   };
 
   return (
@@ -59,11 +68,12 @@ const Gallery = () => {
       {!selectedAlbum ? (
         <>
           <h2 className="gallery-subtitle">Albums</h2>
+
           <div className="album-grid">
             {albums.length > 0 ? (
-              albums.map((album, index) => (
+              albums.map((album) => (
                 <div
-                  key={index}
+                  key={album} // ✅ fixed key
                   className="album-card"
                   onClick={() => openAlbum(album)}
                 >
@@ -81,7 +91,10 @@ const Gallery = () => {
           <button className="back-btn" onClick={goBack}>
             ← Back to Albums
           </button>
-          <h2 className="gallery-subtitle">Album: {selectedAlbum}</h2>
+
+          <h2 className="gallery-subtitle">
+            Album: {selectedAlbum}
+          </h2>
 
           {loading ? (
             <p>Loading...</p>
@@ -116,7 +129,7 @@ const Gallery = () => {
         </>
       )}
 
-      {/* Lightbox Modal */}
+      {/* Lightbox */}
       {lightboxIndex !== null && (
         <div className="lightbox" onClick={closeLightbox}>
           <button className="lightbox-close" onClick={closeLightbox}>
