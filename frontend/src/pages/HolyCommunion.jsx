@@ -218,14 +218,7 @@ const HolyCommunion = () => {
                 <p className="mt-3 text-[1.02rem] leading-relaxed text-[#3a2d20]">
                   For enrollment information, contact our Faith Formation office.
                 </p>
-                <div className="mt-5">
-                  <a
-                    href="/contact"
-                    className="inline-flex items-center justify-center rounded-xl bg-[#5a3c1a] px-5 py-3 font-semibold text-white shadow-md transition hover:opacity-90"
-                  >
-                    Contact Us
-                  </a>
-                </div>
+               
               </div>
             </div>
           </aside>
