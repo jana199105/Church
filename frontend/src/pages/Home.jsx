@@ -225,7 +225,7 @@ const toggleMass = () => {
         <h2>Parish Clergy</h2>
         <div className="clergy-grid">
           <div className="clergy-card">
-            <img src="/priest.png" alt="Parish Priest" />
+          
             <h3>Rev. Fr. Antony Peter J</h3>
             <p>Parish Priest</p>
           </div>
