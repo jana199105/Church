@@ -135,11 +135,20 @@ const Zones = () => {
         </div>
       </main>
 
-      <footer className="border-t border-[#ead8c6] bg-[#2f2519] text-[#fff4e7]">
-        <div className="mx-auto max-w-7xl px-6 py-6 text-center text-sm">
-          © {new Date().getFullYear()} St. Therese of Child Jesus Church
-        </div>
-      </footer>
+      <footer className="footer">
+  <div className="footer-content">
+    <span>
+      © {new Date().getFullYear()} St. Therese of Child Jesus Church
+    </span>
+
+    <span className="powered-by">
+      Powered by
+     <span className="brand-name">
+  Na<span className="cross-t">T</span>hans
+</span>
+    </span>
+  </div>
+</footer>
     </div>
   );
 };

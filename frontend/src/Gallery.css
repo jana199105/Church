@@ -112,3 +112,72 @@
 .album-create button:hover {
   background: #7b3f14;
 }
+footer {
+  background: linear-gradient(90deg, #5a2d0c, #3b2208);
+  color: #fff;
+  padding: 12px 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.powered-by {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+
+.footer-logo {
+  height: 50px;
+  width: auto;
+
+
+  padding: 8px 12px;
+  border-radius: 10px;
+
+  filter: contrast(1.3);   /* improve clarity */
+}
+.brand-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #ffd28a;
+  letter-spacing: 1px;
+}
+
+/* Cross style T */
+.cross-t {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+}
+
+/* vertical line */
+.cross-t::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: #ffd28a;
+  transform: translateX(-50%);
+}
+
+/* horizontal line */
+.cross-t::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  width: 12px;
+  height: 2px;
+  
+  transform: translateX(-50%);
+}
