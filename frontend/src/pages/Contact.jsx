@@ -22,7 +22,7 @@ const Contact = () => {
         <li>Mass Bookings</li>
         <li>Marriage Preparation / Counselling</li>
         <li>Family Record and Subscription Updates</li>
-        <li>Cemetery and burial related enquiries</li>
+       
       </ul>
 
     
@@ -31,7 +31,7 @@ const Contact = () => {
         
         <tr>
           <td className="label-cell">Sundays</td>
-          <td>8:00 AM – 1:00 PM</td>
+          <td>8:00 AM – 11:30 AM</td>
         </tr>
       </table>
 

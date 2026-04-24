@@ -33,11 +33,25 @@ const HolyOrders = () => {
         </div>
 
         <p className="mt-6">
-          For more information, please contact the diocesan vocation director.
+         
+For more information, please contact the Parish Priest.
+
         </p>
       </main>
+<footer className="footer">
+  <div className="footer-content">
+    <span>
+      © {new Date().getFullYear()} St. Therese of Child Jesus Church
+    </span>
 
-      <footer className="footer">© {new Date().getFullYear()} St. Therese of Child Jesus Church</footer>
+    <span className="powered-by">
+      Powered by
+     <span className="brand-name">
+  Na<span className="cross-t">T</span>hans
+</span>
+    </span>
+  </div>
+</footer>
     </div>
   );
 };

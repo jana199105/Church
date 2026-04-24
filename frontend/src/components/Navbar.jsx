@@ -42,7 +42,11 @@ export default function Navbar() {
       <header className="header-banner-split">
         <div className="header-text">
           <h1>St. Therese of Child Jesus Church</h1>
-          <p>Dommasandra, Bangalore</p>
+          <p>T C Halli, Sarjapur - Marathahalli Rd
+Domasandra <br/> Bengaluru, Karnataka 562125
+
+          </p>
+          
         </div>
         <div className="header-image">
           <img src="/st1.jpeg" alt="St. Therese of Child Jesus" />
@@ -77,7 +81,7 @@ export default function Navbar() {
    <li><Link to="/NewsEvents">News/Events</Link></li>
               <li><Link to="/Gallery">Gallery</Link></li>
               <li><Link to="/Contact">Contact</Link></li>
-              <li><Link to="/login">Login</Link></li>
+             {/* <li><Link to="/login">Login</Link></li>*/}
             </>
           ) : (
             <>

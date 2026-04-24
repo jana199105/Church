@@ -28,17 +28,27 @@ const AnointingOfTheSick = () => {
 
         <div className="bg-[#fff7ef] p-5 rounded-md border border-[#e9d8c6] shadow-sm text-center mt-8">
           <p className="font-semibold text-[#5a3c1a]">
-            Please contact the parish immediately for emergencies  
-            or hospital visits.
+            Please contact the parish which is near to the hospital immediately.
           </p>
         </div>
 
-        <p className="mt-6">
-          Regularly scheduled anointing services may also be available — please check the church calendar.
-        </p>
+       
       </main>
 
-      <footer className="footer">© {new Date().getFullYear()} St. Therese of Child Jesus Church</footer>
+      <footer className="footer">
+  <div className="footer-content">
+    <span>
+      © {new Date().getFullYear()} St. Therese of Child Jesus Church
+    </span>
+
+    <span className="powered-by">
+      Powered by
+     <span className="brand-name">
+  Na<span className="cross-t">T</span>hans
+</span>
+    </span>
+  </div>
+</footer>
     </div>
   );
 };

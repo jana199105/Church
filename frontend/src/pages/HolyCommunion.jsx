@@ -214,9 +214,9 @@ const HolyCommunion = () => {
             {/* Call to action */}
             <div className="rounded-2xl border border-[#ead8c6] bg-[#fffaf5] shadow-sm">
               <div className="p-7">
-                <h3 className="text-xl font-bold text-[#5a3c1a]">Need Enrollment Help?</h3>
+                <h3 className="text-xl font-bold text-[#5a3c1a]">Need For Enrollment Help?</h3>
                 <p className="mt-3 text-[1.02rem] leading-relaxed text-[#3a2d20]">
-                  For enrollment information, contact our Faith Formation office.
+                  For enrollment information, contact our parish office .
                 </p>
                
               </div>
@@ -226,11 +226,20 @@ const HolyCommunion = () => {
       </main>
 
       {/* Footer */}
-      <footer className="mt-10 border-t border-[#ead8c6] bg-[#2f2519] text-[#fff4e7]">
-        <div className="max-w-5xl mx-auto px-6 py-6 text-center text-sm">
-          © {new Date().getFullYear()} St. Therese of Child Jesus Church
-        </div>
-      </footer>
+     <footer className="footer">
+  <div className="footer-content">
+    <span>
+      © {new Date().getFullYear()} St. Therese of Child Jesus Church
+    </span>
+
+    <span className="powered-by">
+      Powered by
+     <span className="brand-name">
+  Na<span className="cross-t">T</span>hans
+</span>
+    </span>
+  </div>
+</footer>
     </div>
   );
 };

@@ -38,7 +38,20 @@ const Reconciliation = () => {
         </p>
       </main>
 
-      <footer className="footer">© {new Date().getFullYear()} St. Therese of Child Jesus Church</footer>
+<footer className="footer">
+  <div className="footer-content">
+    <span>
+      © {new Date().getFullYear()} St. Therese of Child Jesus Church
+    </span>
+
+    <span className="powered-by">
+      Powered by
+     <span className="brand-name">
+  Na<span className="cross-t">T</span>hans
+</span>
+    </span>
+  </div>
+</footer>
     </div>
   );
 };

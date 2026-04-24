@@ -24,7 +24,9 @@ export default function Home() {
         <div className="hero-content">
           <p className="welcome">WELCOME TO</p>
           <h2>St. Theresa of the Child Jesus Catholic Church</h2>
+          <p className="location">T C Halli, Sarjapur - Marathahalli Rd</p>
           <p className="location">Dommasandra, Bangalore</p>
+          <p className="location">Karnataka, 562125</p>
           <div className="hero-buttons">
             <a href="#mass" className="btn-gold">Join Our Mass</a>
             <a href="#live" className="btn-outline">Watch Live</a>

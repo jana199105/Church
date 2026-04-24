@@ -57,7 +57,7 @@ const weekdayMass = [
               <tr>
                 <th>Time</th>
                 <th>Language</th>
-                <th>Notes</th>
+               
               </tr>
             </thead>
             <tbody>
@@ -65,7 +65,7 @@ const weekdayMass = [
                 <tr key={i}>
                   <td>{m.time}</td>
                   <td>{m.language}</td>
-                  <td>{m.notes}</td>
+                
                 </tr>
               ))}
             </tbody>
